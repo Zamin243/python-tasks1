@@ -1,0 +1,146 @@
+#task1
+#Write a Python program to find out what version of Python you are using.
+import sys
+
+print("Python version")
+print(sys.version)
+
+print("Version info.")
+print(sys.version_info)
+
+#task2
+#Write a Python program to display the current date and time.
+from datetime import datetime
+indi = datetime.now()
+print(indi.strftime("%Y-%m-%d %H:%M:%S"))
+
+#task3
+# uncomment the code below, and run it
+
+# import this
+
+
+#task4
+# Write a Python program that calculates the area of a circle based on the radius entered by the user.
+import math
+radius=int(input())
+S=math.pi*(radius**2)
+print(S)
+
+#task5
+# Write a Python program that accepts a filename from the user and prints the extension of the file.
+# Sample filename : abc.java
+# Output : java
+
+#task6
+# Write a Python program to display the first and last colors from the following list.
+color_list = ["Red","Green","White" ,"Black"]
+print(color_list[0], color_list[-1])
+
+#task7
+# Write a Python program to display the examination schedule. (extract the date from exam_st_date).
+exam_st_date = (12, 12, 2012)
+# Sample Output : The examination will start from : 12 / 12 / 2012
+print(exam_st_date[0], "/",exam_st_date[1], "/", exam_st_date[2])
+
+#task8
+# check if a string is palindrome
+a=input()
+b=a[::-1]
+if a == b:
+	print("Palindrome")
+else:
+	print("Not a palindrome")
+
+#task9
+# given the list, find the maximum, and minimum
+a=[1,2,3,4,5,6,7,8,9,10]
+print(max(a),min(a))
+
+#task10
+# fizzbuzz
+# If the number is divisible by 3, you need to output "Fizz", if by 5 - "Buzz",
+# and if by both 3 and 5 - "FizzBuzz".
+# Otherwise, you need to output the number itself.
+a=int(input())
+for i in range(1, a + 1):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+
+#task11
+# check if a number is prime
+a=int(input())
+k=0
+for i in range(1,a+1):
+     if a%i==0:
+          k=k+1
+if k==2:
+     print("this is prime")
+else:
+     print("this is not prime, dude.")
+
+#task12
+# write a script to find fibonacci numbers
+# input = 3, output = 1,
+# input = 5, output = 3
+
+# 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+# each number, is equal to the sum of previous two numbers.
+# base cases: first number = 0, second number = 1.
+
+
+#task13
+# check if a given number is square
+a=int(input())
+if int(a**0.5)==a**0.5:
+     print("this is square")
+else:
+     print("this is not square")
+
+#task14
+## Write a Python program that determines whether a given number (accepted from the user)
+# is even or odd, and prints an appropriate message to the user.
+a=int(input())
+if a%2==0:
+     print(a, " is even")
+else:
+     print(a, " is odd")
+
+#task15
+# Write a Python program to count the number 4 in a given list.
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+k=0
+for i in a:
+     if i==4:
+          k=k+1
+print(k)
+
+#task16
+# Write a Python script that checks whether a specified value is contained within a group of values.
+
+# list = [1, 2, 3], value = 3 -> returns True
+# list = [1, 2, 3], value = 4 -> returns False
+list=[1,2,3,4,5,6,7,8,9]
+value=int(input())
+if value in list:
+     print("True")
+else:
+     print("False")
+
+#task17
+# If we list all the natural numbers below 10 that are multiples of 3 or 5 , we get 3, 5, 6, and 9.
+# The sum of these multiples is 23.
+# Find the sum of all the multiples of 3 or 5 below 1000.
+cem = 0
+for i in range(1000):
+    if i % 3 == 0 or i % 5 == 0:
+        cem += i
+print(cem)
+
